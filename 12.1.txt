@@ -1,0 +1,23 @@
+//ќписать функцию PowerA3(A, B), вычисл€ющую третью степень числа A и возвращающую ее в переменной B (A Ч входной, B Ч выходной параметр; оба параметра €вл€ютс€ вещественными). — помощью этой функции найти третьи степени п€ти данных чисел.
+#include <iostream>
+#include <string>
+using namespace std;
+void PowerA3(float x, float& y)
+{
+	y=x*x*x;
+}
+int main()
+{
+	int i;
+	float A, B;
+	for (i=1;i<=5;i++)
+	{
+	    cout << "A=";
+	    cin >> A;
+	    PowerA3(A,B);
+	    cout << "B=" << B << "\n";
+	}
+	cout << "\n";
+	system("pause");
+	return 0;
+}

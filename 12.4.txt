@@ -1,0 +1,41 @@
+//Описать функцию Quarter(x, y) целого типа, определяющую номер координатной четверти, в которой находится точка с ненулевыми вещественными координатами (x, y). С помощью этой функции найти номера координатных четвертей для трех точек с данными ненулевыми координатами
+#include <iostream>
+#include <string>
+using namespace std;
+void Quarter(int ox, int& oy)
+{
+	if ((ox!=0) && (oy!=0))
+  {
+   if ((ox>0) && (oy>0))
+   {
+    cout << "1 chetvert'\n-----\n";   
+   }
+   if ((ox<0) && (oy>0))
+   {
+    cout << "2 chetvert'\n-----\n";   
+   }
+   if ((ox<0) && (oy<0))
+   {
+    cout << "3 chetvert'\n-----\n";   
+   }
+   if ((ox>0) && (oy<0))
+   {
+    cout << "4 chetvert'\n-----\n";   
+   }
+  }
+}
+int main()
+{
+    int i, X, Y;
+	for (i=1; i <= 3; i++)
+	{
+	  cout << "X("<< i << ") = ";
+	  cin >> X;
+	  cout << "Y("<< i << ") = ";
+	  cin >> Y; 
+	  Quarter(X,Y);
+	}
+	
+	system("pause");
+	return 0;
+}
